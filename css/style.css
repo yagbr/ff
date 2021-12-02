@@ -1,0 +1,71 @@
+body{
+    background-color: #1e1f22;
+   
+}
+
+.qrt-app .left-bar{
+    position: relative;
+    left: 0;
+    top:0;
+    width: 80px;
+    height: 100vh;
+    background-color: #28292c;
+}
+
+.bg-color{
+  background-color: #28292c !important;
+  border-top-right-radius: 5px;
+}
+
+.qrt-app {
+  margin: 10px;
+  border-radius: 5px;
+    background-color: #1e1f22;
+    -webkit-box-shadow: 0 1px 2px 0 rgb(45 45 60 / 10%);
+    box-shadow: 0 1px 2px 0 rgb(45 45 60 / 10%);
+    overflow: hidden;
+   height: 637px;
+}
+
+.logo{
+   width: 80px;  
+   height: 80px;
+   background-color: #ff7043;
+   border-top-left-radius: 5px;
+}
+
+.logo img {
+    width: 22px;
+    height: 22px;
+}
+
+.slidebar-text {
+    padding-top: 50px;
+}
+
+.slidebar-text a{
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 2px;
+}
+
+.social-links  ul li{
+    list-style: none;
+    text-align: center;
+}
+
+.social-links  ul li a{
+    color: #fff;
+}
+
+.qrt-app .left-bar .social-links{
+  bottom: 25%; 
+  left: 50%;
+  transform: translateX(-50%);
+
+}
