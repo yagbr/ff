@@ -1,0 +1,126 @@
+$primay-color : #ff7043;
+
+@mixin background-color{
+    background-color: #1e1f22;
+}
+
+@mixin  position($property) {
+    -webkit-position: $property;
+    -moz-position:$property;
+    position: $property;
+}
+
+@mixin transform($property){
+    -webkit-transform: $property;
+    -moz-transform:$property;
+    transform: $property;
+}
+
+.logo{
+    width: 80px;  
+    height: 80px;
+    background-color: $primay-color;
+    border-top-left-radius: 5px;
+}
+
+ body {
+    @include background-color;
+    font-family: "Roboto",sans-serif;
+}
+
+.qrt-app .left-bar{
+   @include position(relative);
+    left: 0;
+    top:0;
+    width: 80px;
+    height: 100vh;
+    background-color: #28292c;
+    &{
+        @media (max-width: 768px){
+            display: none !important;
+        }
+    }
+}
+
+.bg-color{
+  background-color: #28292c !important;
+  border-top-right-radius: 5px;
+}
+
+.qrt-app {
+  margin: 10px;
+  border-radius: 5px;
+    @include background-color;
+    -webkit-box-shadow: 0 1px 2px 0 rgb(45 45 60 / 10%);
+    box-shadow: 0 1px 2px 0 rgb(45 45 60 / 10%);
+    overflow: hidden;
+   height: 637px;
+}
+
+
+.logo img {
+    width: 22px;
+    height: 22px;
+}
+
+.slidebar-text {
+    padding-top: 50px;
+}
+
+.slidebar-text a{
+  writing-mode: vertical-rl;
+  @include transform(rotate(-180deg));
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 2px;
+  cursor: default;
+}
+
+.social-links  ul li{
+    list-style: none;
+    text-align: center;
+}
+
+.social-links  ul li a{
+    color: #fff;
+    &:hover{
+        color: $primay-color;
+    }
+}
+
+.qrt-app .left-bar .social-links{
+  bottom: 25%; 
+  left: 50%;
+ @include transform(translateX(-50%));
+}
+
+.menu .nav-link{
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    &:hover{
+        color: $primay-color !important;
+    }
+}
+
+.qrt-logo img{
+    width: 80px;
+}
+
+.qrt-bg {
+    background-color: $primay-color;
+    font-size: 11px;
+    height: 45px;
+    padding: 2px 35px 0;
+    border-radius: 2px;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    font-weight: 800px;
+}
+
+
