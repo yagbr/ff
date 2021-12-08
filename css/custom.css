@@ -105,4 +105,84 @@ body {
   letter-spacing: 2px;
   border-radius: 2px;
   font-weight: 800px;
+}
+
+.searchbardiv {
+  display: block;
+  -webkit-position: absolute;
+  -moz-position: absolute;
+  position: absolute;
+  background: #7D1935;
+  top: 100%;
+  right: 0px;
+  z-index: 1001;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin-left: 80px;
+}
+
+.buttonsearch {
+  float: right;
+  margin-right: 10px;
+  background-color: transparent;
+  border: 0px;
+  box-shadow: none;
+}
+.buttonsearch:hover {
+  box-shadow: none;
+  border: 0px;
+}
+.buttonsearch:focus {
+  box-shadow: none;
+  border: 0px;
+}
+
+#formsearch {
+  display: none;
+}
+
+#searchbox {
+  box-shadow: none;
+  padding: 8px 14px;
+}
+#searchbox:hover {
+  box-shadow: none;
+}
+
+.form-control:focus {
+  border-color: #ccc;
+}
+
+.navbar-toggle {
+  margin-right: 35px;
+  border: none;
+  background: transparent !important;
+}
+.navbar-toggle:hover {
+  background: transparent !important;
+}
+.navbar-toggle .icon-bar {
+  width: 22px;
+  transition: all 0.2s;
+}
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggle .collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggle .collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggle .collapsed .bottom-bar {
+  transform: rotate(0);
 }/*# sourceMappingURL=custom.css.map */

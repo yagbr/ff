@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <title>Document</title>
 </head>
@@ -22,7 +24,7 @@
     <div class="qrt-app">
 
         <div class="top-bar">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light pt-0 pb-0 bg-color">
+            <nav class="navbar navbar-expand-lg navbar-light pt-0 pb-0 bg-color">
                 <div class="container-fluid ps-0">
                     <a class="navbar-brand logo d-flex justify-content-center align-items-center" href="#"><img
                             class=" lazyloaded"
@@ -30,7 +32,11 @@
                             data-src="https://bslthemes.site/quarty/wp-content/uploads/2021/03/logo-sm.png"
                             alt="Quarty – Architecture WordPress Theme"></a>
 
-                    <a class="navbar-brand  d-flex justify-content-center align-items-center qrt-logo" href="#"><img class=" ls-is-cached lazyloaded" src="https://bslthemes.site/quarty/wp-content/uploads/2021/03/logo.png" data-src="https://bslthemes.site/quarty/wp-content/uploads/2021/03/logo.png" alt="Quarty – Architecture WordPress Theme"></a>
+                    <a class="navbar-brand  d-flex justify-content-center align-items-center qrt-logo" href="#"><img
+                            class=" ls-is-cached lazyloaded"
+                            src="https://bslthemes.site/quarty/wp-content/uploads/2021/03/logo.png"
+                            data-src="https://bslthemes.site/quarty/wp-content/uploads/2021/03/logo.png"
+                            alt="Quarty – Architecture WordPress Theme"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -44,13 +50,37 @@
                             <a class="nav-link" href="#">Contact</a>
                             <a class="nav-link" href="#">Blog</a>
                             <a class="nav-link" href="#">Shop</a>
-                            
+
                         </div>
                     </div>
 
-                    <a href="#" class="btn qrt-bg btn-lg text-uppercase d-inline-flex justify-content-center align-items-center">Large button</a>
+                    <a href="#"
+                        class="btn qrt-bg btn-lg text-uppercase d-inline-flex justify-content-center align-items-center">Large
+                        button</a>
+
+
+                    <div class="container searchbardiv" id="formsearch">
+                        <form role="search" method="get" id="searchform">
+                            <div class="input-group">
+                                <input type="text" id="searchbox" class="form-control" name="s" id="s"
+                                    placeholder="search">
+
+                            </div>
+                        </form>
+
+                    </div>
+
                 </div>
+
+                <button type="button" class="buttonsearch" id="buttonsearch">
+                    <i class="bi bi-search openclosesearch text-white"></i>
+                    <i class="bi bi-x openclosesearch text-white" style="display:none"></i>
+
+                </button>
+
+
             </nav>
+
 
         </div>
         <div class="left-bar">
@@ -67,17 +97,20 @@
                 </ul>
             </div>
         </div>
-
-      
-
-
-
     </div>
-
-  
-
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $('#buttonsearch').click(function () {
+            $('#formsearch').slideToggle("fast", function () {
+                $('#content').toggleClass("moremargin");
+            });
+            $('#searchbox').focus()
+            $('.openclosesearch').toggle();
+        });
+    </script>
 </body>
 
 </html>
